@@ -1,17 +1,25 @@
-// Add Express
+/* eslint-disable no-console*/
 import express from "express";
+import { APIs_V1 } from "./src/routes/v1/index";
+import cors from "cors";
 
-// Initialize Express
-const app = express();
+const START_SERVER = () => {
+  const app = express();
 
-// Create GET request
-app.get("/", (req, res) => {
-  res.send("Express on Vercel 2");
-});
+  // Enable req.body json data
+  app.use(express.json());
+  app.use(cors());
 
-// Initialize server
-app.listen(5000, () => {
-  console.log("Running on port 5000.");
-});
-// Export the Express API
-module.exports = app;
+  //Use APIs v1
+  app.use("/api/v1", APIs_V1);
+
+  app.get("/", (req, res) => {
+    res.send("Express on Vercel");
+  });
+
+
+  const server = app.listen(5000, () => {
+  });
+};
+
+START_SERVER();
