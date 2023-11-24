@@ -1,7 +1,7 @@
 /* eslint-disable no-console*/
-const express = require("express");
-  const route = require('./src/routes/v1');
-  const cors = require("cors");
+import express from "express";
+// import route from "./src/routes/v1";
+import cors from "cors";
 
 const app = express();
 
@@ -11,12 +11,11 @@ app.get("/", (req, res) => {
 
 app.use(express.json());
 app.use(cors());
-route(app)
-
+// route(app);
 
 app.listen(5000, () => {
   console.log("Running on port 5000.");
 });
 
 // Export the Express API
-module.exports = app;
+export default app;
