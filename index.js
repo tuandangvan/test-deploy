@@ -2,6 +2,7 @@
 import express from "express";
 // import route from "./src/routes/v1";
 import cors from "cors";
+import { APIs_V1 } from "~/routes/v1";
 
 const app = express();
 
