@@ -1,7 +1,6 @@
 /* eslint-disable no-console*/
 import express from "express";
-import { APIs_V1 } from "./src/routes/v1/index";
-import cors from "cors";
+
 
 const app = express();
 
