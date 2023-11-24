@@ -1,7 +1,7 @@
 /* eslint-disable no-console*/
 const express = require("express");
-const route = require('./src/routes/v1');
-const cors = require("cors");
+  // const route = require('./src/routes/v1');
+  // const cors = require("cors");
 
 const app = express();
 
