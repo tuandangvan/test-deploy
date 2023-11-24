@@ -9,9 +9,9 @@ app.get("/", (req, res) => {
   res.send("Express on Vercel 2");
 });
 
-app.use(express.json());
-app.use(cors());
-route(app)
+// app.use(express.json());
+// app.use(cors());
+// route(app)
 
 
 app.listen(5000, () => {
