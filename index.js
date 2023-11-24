@@ -1,12 +1,12 @@
 // Add Express
-import { express } from "express"
+const express = require("express");
 
 // Initialize Express
 const app = express();
 
 // Create GET request
 app.get("/", (req, res) => {
-  res.send("Express on Vercel 1");
+  res.send("Express on Vercel 2");
 });
 
 // Initialize server
