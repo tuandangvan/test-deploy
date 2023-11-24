@@ -1,14 +1,33 @@
-// const userRouter = require('./user')
-// const chatRouter = require('./chat')
-// const messageRouter = require('./message')
+import express from "express";
+// import { StatusCodes } from "http-status-codes";
+// import { authRoute } from "./authRoute";
+// import { userRoute } from "./user/userRoute";
+// import { petRoute } from "./center/petRoute";
+// import { centerRoute } from "./center/centerRoute";
+// import { postRoute } from "./postRoute";
+// import { uploadRoute } from "./uploadRoute";
+// import { adminRoute } from "./admin/adminRoute";
+// import { chatRoute } from "./chat/chatRoute";
+// import { messageRoute } from "./chat/messageRoute";
 
-const userRouter = require('./user')
-module.exports = (app) => {
 
-    app.use('/api/v1', userRouter)
-    // app.use('/api/chat', chatRouter)
-    // app.use('/api/message', messageRouter)
-    // app.use('/api/', userRouter)
-    
-}
+const router = express.Router();
 
+// Check APIs v1/status
+router.get("/status", (req, res) => {
+  res.json({
+    message: "API v1 are ready to use!",
+  });
+});
+
+// router.use("/auth", authRoute);
+// router.use("/user", userRoute);
+// router.use("/pet", petRoute);
+// router.use("/center", centerRoute);
+// router.use("/post", postRoute);
+// router.use("/upload", uploadRoute);
+// router.use("/admin", adminRoute);
+// router.use("/chat", chatRoute);
+// router.use("/message", messageRoute);
+
+export const APIs_V1 = router;
