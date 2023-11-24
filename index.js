@@ -6,12 +6,12 @@ import cors from "cors";
 const START_SERVER = () => {
   const app = express();
 
-  // Enable req.body json data
-  app.use(express.json());
-  app.use(cors());
+  // // Enable req.body json data
+  // app.use(express.json());
+  // app.use(cors());
 
-  //Use APIs v1
-  app.use("/api/v1", APIs_V1);
+  // //Use APIs v1
+  // app.use("/api/v1", APIs_V1);
 
   app.get("/", (req, res) => {
     res.send("Express on Vercel");
